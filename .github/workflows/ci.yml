@@ -1,0 +1,18 @@
+# Name that appears in the GitHub Actions tab
+name: CI
+
+# When to run this pipeline
+on:
+  push:
+    branches: [main]     # Run when code is pushed to main
+  pull_request:
+    branches: [main]     # Run when a merge request targets main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Use a fresh Ubuntu VM from GitHub's cloud
+    steps:
+      - uses: actions/checkout@v4   # Pull our repo code into the VM
+      - uses: astral-sh/setup-uv@v4 # Install uv in the VM
+      - run: uv sync --dev          # Install all dependencies
+      - run: uv run pytest          # Run the tests
