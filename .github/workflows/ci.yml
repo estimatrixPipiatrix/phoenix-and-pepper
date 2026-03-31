@@ -12,7 +12,9 @@ jobs:
   test:
     runs-on: ubuntu-latest  # Use a fresh Ubuntu VM from GitHub's cloud
     steps:
-      - uses: actions/checkout@v4   # Pull our repo code into the VM
-      - uses: astral-sh/setup-uv@v4 # Install uv in the VM
-      - run: uv sync --dev          # Install all dependencies
-      - run: uv run pytest          # Run the tests
+      - uses: actions/checkout@v4         # Pull our repo code into the VM
+      - uses: astral-sh/setup-uv@v4       # Install uv in the VM
+      - run: uv sync --dev                # Install all dependencies
+      - run: uv run ruff check .          # Static analysis
+      - run: uv run ruff format --check . # Verify formatting
+      - run: uv run pytest                # Run the tests
