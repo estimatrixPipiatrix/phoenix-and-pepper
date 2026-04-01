@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  db:
+    image: docker.io/library/postgres:16
+    container_name: phoenix_db
+    environment:
+      POSTGRES_DB: phoenix_and_pepper
+      POSTGRES_USER: phoenix
+      POSTGRES_PASSWORD: pepper
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
