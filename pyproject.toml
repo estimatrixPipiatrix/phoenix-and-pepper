@@ -27,3 +27,4 @@ packages = ["src"]
 
 [tool.ruff]
 line-length = 79
+exclude = ["data/"]

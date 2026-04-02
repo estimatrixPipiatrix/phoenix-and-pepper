@@ -1,72 +1,9 @@
-{
-    "ship": "Fortuna Lenta",
-    "origin": "Ostia",
-    "destination": "Puteoli",
-    "departure_date": "200-03-16",
-    "arrival_date": "200-03-19",
-    "status": "completed",
-}
-{
-    "ship": "Fortuna Lenta",
-    "origin": "Ostia",
-    "destination": "Syracusae",
-    "departure_date": "200-04-02",
-    "arrival_date": "200-04-08",
-    "status": "completed",
-}
-{
-    "ship": "Ventus Secundus",
-    "origin": "Puteoli",
-    "destination": "Ostia",
-    "departure_date": "200-03-21",
-    "arrival_date": "200-03-24",
-    "status": "completed",
-}
-{
-    "ship": "Fortuna Lenta",
-    "origin": "Puteoli",
-    "destination": "Neapolis",
-    "departure_date": "200-03-02",
-    "arrival_date": "200-03-03",
-    "status": "completed",
-}
-{
-    "ship": "Ventus Secundus",
-    "origin": "Puteoli",
-    "destination": "Syracusae",
-    "departure_date": "200-04-06",
-    "arrival_date": "200-04-11",
-    "status": "completed",
-}
-{
-    "ship": "Fortuna Lenta",
-    "origin": "Ostia",
-    "destination": "Tarentum",
-    "departure_date": "200-03-26",
-    "arrival_date": "200-04-01",
-    "status": "completed",
-}
-{
-    "ship": "Ignis Maris",
-    "origin": "Ostia",
-    "destination": "Messana",
-    "departure_date": "200-03-11",
-    "arrival_date": "200-03-16",
-    "status": "completed",
-}
-{
-    "ship": "Ventus Secundus",
-    "origin": "Puteoli",
-    "destination": "Brundisium",
-    "departure_date": "200-04-11",
-    "arrival_date": null,
-    "status": "in_transit",
-}
-{
-    "ship": "Ignis Maris",
-    "origin": "Ostia",
-    "destination": "Neapolis",
-    "departure_date": "200-04-09",
-    "arrival_date": null,
-    "status": "in_transit",
-}
+{"ship": "Fortuna Lenta", "origin": "Ostia", "destination": "Puteoli", "departure_date": "200-03-16", "arrival_date": "200-03-19", "status": "completed"}
+{"ship": "Fortuna Lenta", "origin": "Ostia", "destination": "Syracusae", "departure_date": "200-04-02", "arrival_date": "200-04-08", "status": "completed"}
+{"ship": "Ventus Secundus", "origin": "Puteoli", "destination": "Ostia", "departure_date": "200-03-21", "arrival_date": "200-03-24", "status": "completed"}
+{"ship": "Fortuna Lenta", "origin": "Puteoli", "destination": "Neapolis", "departure_date": "200-03-02", "arrival_date": "200-03-03", "status": "completed"}
+{"ship": "Ventus Secundus", "origin": "Puteoli", "destination": "Syracusae", "departure_date": "200-04-06", "arrival_date": "200-04-11", "status": "completed"}
+{"ship": "Fortuna Lenta", "origin": "Ostia", "destination": "Tarentum", "departure_date": "200-03-26", "arrival_date": "200-04-01", "status": "completed"}
+{"ship": "Ignis Maris", "origin": "Ostia", "destination": "Messana", "departure_date": "200-03-11", "arrival_date": "200-03-16", "status": "completed"}
+{"ship": "Ventus Secundus", "origin": "Puteoli", "destination": "Brundisium", "departure_date": "200-04-11", "arrival_date": null, "status": "in_transit"}
+{"ship": "Ignis Maris", "origin": "Ostia", "destination": "Neapolis", "departure_date": "200-04-09", "arrival_date": null, "status": "in_transit"}

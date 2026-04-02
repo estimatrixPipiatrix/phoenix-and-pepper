@@ -1,144 +1,24 @@
-{
-    "origin": "Ostia",
-    "destination": "Puteoli",
-    "distance_km": 260,
-    "base_sailing_days": 3,
-    "danger_level": 1,
-    "danger_type": "none",
-}
-{
-    "origin": "Puteoli",
-    "destination": "Ostia",
-    "distance_km": 260,
-    "base_sailing_days": 3,
-    "danger_level": 1,
-    "danger_type": "none",
-}
-{
-    "origin": "Ostia",
-    "destination": "Neapolis",
-    "distance_km": 280,
-    "base_sailing_days": 3,
-    "danger_level": 1,
-    "danger_type": "none",
-}
-{
-    "origin": "Neapolis",
-    "destination": "Ostia",
-    "distance_km": 280,
-    "base_sailing_days": 3,
-    "danger_level": 1,
-    "danger_type": "none",
-}
-{
-    "origin": "Puteoli",
-    "destination": "Neapolis",
-    "distance_km": 30,
-    "base_sailing_days": 1,
-    "danger_level": 1,
-    "danger_type": "none",
-}
-{
-    "origin": "Neapolis",
-    "destination": "Puteoli",
-    "distance_km": 30,
-    "base_sailing_days": 1,
-    "danger_level": 1,
-    "danger_type": "none",
-}
-{
-    "origin": "Neapolis",
-    "destination": "Messana",
-    "distance_km": 350,
-    "base_sailing_days": 4,
-    "danger_level": 2,
-    "danger_type": "natural",
-}
-{
-    "origin": "Messana",
-    "destination": "Neapolis",
-    "distance_km": 350,
-    "base_sailing_days": 4,
-    "danger_level": 2,
-    "danger_type": "natural",
-}
-{
-    "origin": "Messana",
-    "destination": "Syracusae",
-    "distance_km": 140,
-    "base_sailing_days": 2,
-    "danger_level": 4,
-    "danger_type": "mythological",
-}
-{
-    "origin": "Syracusae",
-    "destination": "Messana",
-    "distance_km": 140,
-    "base_sailing_days": 2,
-    "danger_level": 4,
-    "danger_type": "mythological",
-}
-{
-    "origin": "Messana",
-    "destination": "Panormus",
-    "distance_km": 230,
-    "base_sailing_days": 3,
-    "danger_level": 2,
-    "danger_type": "natural",
-}
-{
-    "origin": "Panormus",
-    "destination": "Messana",
-    "distance_km": 230,
-    "base_sailing_days": 3,
-    "danger_level": 2,
-    "danger_type": "natural",
-}
-{
-    "origin": "Brundisium",
-    "destination": "Tarentum",
-    "distance_km": 120,
-    "base_sailing_days": 2,
-    "danger_level": 1,
-    "danger_type": "none",
-}
-{
-    "origin": "Tarentum",
-    "destination": "Brundisium",
-    "distance_km": 120,
-    "base_sailing_days": 2,
-    "danger_level": 1,
-    "danger_type": "none",
-}
-{
-    "origin": "Ostia",
-    "destination": "Syracusae",
-    "distance_km": 550,
-    "base_sailing_days": 6,
-    "danger_level": 3,
-    "danger_type": "natural",
-}
-{
-    "origin": "Syracusae",
-    "destination": "Ostia",
-    "distance_km": 550,
-    "base_sailing_days": 6,
-    "danger_level": 3,
-    "danger_type": "natural",
-}
-{
-    "origin": "Puteoli",
-    "destination": "Brundisium",
-    "distance_km": 420,
-    "base_sailing_days": 5,
-    "danger_level": 2,
-    "danger_type": "natural",
-}
-{
-    "origin": "Brundisium",
-    "destination": "Puteoli",
-    "distance_km": 420,
-    "base_sailing_days": 5,
-    "danger_level": 2,
-    "danger_type": "natural",
-}
+{"origin": "Ostia", "destination": "Puteoli", "distance_km": 260, "base_sailing_days": 3, "danger_level": 1, "danger_type": "none"}
+{"origin": "Puteoli", "destination": "Ostia", "distance_km": 260, "base_sailing_days": 3, "danger_level": 1, "danger_type": "none"}
+{"origin": "Ostia", "destination": "Neapolis", "distance_km": 280, "base_sailing_days": 3, "danger_level": 1, "danger_type": "none"}
+{"origin": "Neapolis", "destination": "Ostia", "distance_km": 280, "base_sailing_days": 3, "danger_level": 1, "danger_type": "none"}
+{"origin": "Puteoli", "destination": "Neapolis", "distance_km": 30, "base_sailing_days": 1, "danger_level": 1, "danger_type": "none"}
+{"origin": "Neapolis", "destination": "Puteoli", "distance_km": 30, "base_sailing_days": 1, "danger_level": 1, "danger_type": "none"}
+{"origin": "Neapolis", "destination": "Messana", "distance_km": 350, "base_sailing_days": 4, "danger_level": 2, "danger_type": "natural"}
+{"origin": "Messana", "destination": "Neapolis", "distance_km": 350, "base_sailing_days": 4, "danger_level": 2, "danger_type": "natural"}
+{"origin": "Messana", "destination": "Syracusae", "distance_km": 140, "base_sailing_days": 2, "danger_level": 4, "danger_type": "mythological"}
+{"origin": "Syracusae", "destination": "Messana", "distance_km": 140, "base_sailing_days": 2, "danger_level": 4, "danger_type": "mythological"}
+{"origin": "Messana", "destination": "Panormus", "distance_km": 230, "base_sailing_days": 3, "danger_level": 2, "danger_type": "natural"}
+{"origin": "Panormus", "destination": "Messana", "distance_km": 230, "base_sailing_days": 3, "danger_level": 2, "danger_type": "natural"}
+{"origin": "Brundisium", "destination": "Tarentum", "distance_km": 120, "base_sailing_days": 2, "danger_level": 1, "danger_type": "none"}
+{"origin": "Tarentum", "destination": "Brundisium", "distance_km": 120, "base_sailing_days": 2, "danger_level": 1, "danger_type": "none"}
+{"origin": "Ostia", "destination": "Syracusae", "distance_km": 550, "base_sailing_days": 6, "danger_level": 3, "danger_type": "natural"}
+{"origin": "Syracusae", "destination": "Ostia", "distance_km": 550, "base_sailing_days": 6, "danger_level": 3, "danger_type": "natural"}
+{"origin": "Puteoli", "destination": "Brundisium", "distance_km": 420, "base_sailing_days": 5, "danger_level": 2, "danger_type": "natural"}
+{"origin": "Brundisium", "destination": "Puteoli", "distance_km": 420, "base_sailing_days": 5, "danger_level": 2, "danger_type": "natural"}
+{"origin": "Ostia", "destination": "Tarentum", "distance_km": 480, "base_sailing_days": 5, "danger_level": 2, "danger_type": "natural"}
+{"origin": "Tarentum", "destination": "Ostia", "distance_km": 480, "base_sailing_days": 5, "danger_level": 2, "danger_type": "natural"}
+{"origin": "Puteoli", "destination": "Syracusae", "distance_km": 470, "base_sailing_days": 5, "danger_level": 3, "danger_type": "natural"}
+{"origin": "Syracusae", "destination": "Puteoli", "distance_km": 470, "base_sailing_days": 5, "danger_level": 3, "danger_type": "natural"}
+{"origin": "Ostia", "destination": "Messana", "distance_km": 500, "base_sailing_days": 5, "danger_level": 3, "danger_type": "mythological"}
+{"origin": "Messana", "destination": "Ostia", "distance_km": 500, "base_sailing_days": 5, "danger_level": 3, "danger_type": "mythological"}

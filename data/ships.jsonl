@@ -1,21 +1,3 @@
-{
-    "name": "Ignis Maris",
-    "ship_type": "Actuaria",
-    "home_port": "Ostia",
-    "condition": 4,
-    "status": "in_port",
-}
-{
-    "name": "Fortuna Lenta",
-    "ship_type": "Corbita",
-    "home_port": "Ostia",
-    "condition": 5,
-    "status": "in_port",
-}
-{
-    "name": "Ventus Secundus",
-    "ship_type": "Ponto",
-    "home_port": "Puteoli",
-    "condition": 3,
-    "status": "in_port",
-}
+{"name": "Ignis Maris", "ship_type": "Actuaria", "home_port": "Ostia", "condition": 4, "status": "in_port"}
+{"name": "Fortuna Lenta", "ship_type": "Corbita", "home_port": "Ostia", "condition": 5, "status": "in_port"}
+{"name": "Ventus Secundus", "ship_type": "Ponto", "home_port": "Puteoli", "condition": 3, "status": "in_port"}

@@ -1,63 +1,9 @@
-{
-    "name": "Phoenix Ash",
-    "cargo_class": "phoenix",
-    "unit_price_denarii": 500,
-    "unit_weight_kg": 0.5,
-    "special_handling": "Fireproof container, blessed by priest of Apollo",
-}
-{
-    "name": "Basilisk Venom",
-    "cargo_class": "phoenix",
-    "unit_price_denarii": 800,
-    "unit_weight_kg": 2.0,
-    "special_handling": "Lead-sealed amphorae, no direct eye contact with cargo",
-}
-{
-    "name": "Lodestone",
-    "cargo_class": "phoenix",
-    "unit_price_denarii": 300,
-    "unit_weight_kg": 15.0,
-    "special_handling": "Store away from iron fittings and navigation instruments",
-}
-{
-    "name": "Siren Feathers",
-    "cargo_class": "phoenix",
-    "unit_price_denarii": 600,
-    "unit_weight_kg": 0.1,
-    "special_handling": "Wax-sealed chest, crew must wear earplugs during loading",
-}
-{
-    "name": "Black Pepper",
-    "cargo_class": "pepper",
-    "unit_price_denarii": 30,
-    "unit_weight_kg": 1.0,
-    "special_handling": null,
-}
-{
-    "name": "Garum",
-    "cargo_class": "pepper",
-    "unit_price_denarii": 15,
-    "unit_weight_kg": 5.0,
-    "special_handling": null,
-}
-{
-    "name": "Silphium",
-    "cargo_class": "pepper",
-    "unit_price_denarii": 45,
-    "unit_weight_kg": 0.8,
-    "special_handling": null,
-}
-{
-    "name": "Tyrian Purple",
-    "cargo_class": "pepper",
-    "unit_price_denarii": 60,
-    "unit_weight_kg": 2.0,
-    "special_handling": null,
-}
-{
-    "name": "Olive Oil",
-    "cargo_class": "pepper",
-    "unit_price_denarii": 10,
-    "unit_weight_kg": 8.0,
-    "special_handling": null,
-}
+{"name": "Phoenix Ash", "cargo_class": "phoenix", "unit_price_denarii": 500, "unit_weight_kg": 0.5, "special_handling": "Fireproof container, blessed by priest of Apollo"}
+{"name": "Basilisk Venom", "cargo_class": "phoenix", "unit_price_denarii": 800, "unit_weight_kg": 2.0, "special_handling": "Lead-sealed amphorae, no direct eye contact with cargo"}
+{"name": "Lodestone", "cargo_class": "phoenix", "unit_price_denarii": 300, "unit_weight_kg": 15.0, "special_handling": "Store away from iron fittings and navigation instruments"}
+{"name": "Siren Feathers", "cargo_class": "phoenix", "unit_price_denarii": 600, "unit_weight_kg": 0.1, "special_handling": "Wax-sealed chest, crew must wear earplugs during loading"}
+{"name": "Black Pepper", "cargo_class": "pepper", "unit_price_denarii": 30, "unit_weight_kg": 1.0, "special_handling": null}
+{"name": "Garum", "cargo_class": "pepper", "unit_price_denarii": 15, "unit_weight_kg": 5.0, "special_handling": null}
+{"name": "Silphium", "cargo_class": "pepper", "unit_price_denarii": 45, "unit_weight_kg": 0.8, "special_handling": null}
+{"name": "Tyrian Purple", "cargo_class": "pepper", "unit_price_denarii": 60, "unit_weight_kg": 2.0, "special_handling": null}
+{"name": "Olive Oil", "cargo_class": "pepper", "unit_price_denarii": 10, "unit_weight_kg": 8.0, "special_handling": null}

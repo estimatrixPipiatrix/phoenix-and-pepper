@@ -1,40 +1,8 @@
-{
-    "name": "Marcus Crassus Minor",
-    "customer_type": "mercator",
-    "home_port": "Ostia",
-}
-{
-    "name": "Lucius Petronius",
-    "customer_type": "mercator",
-    "home_port": "Puteoli",
-}
-{
-    "name": "Gaius Sempronius",
-    "customer_type": "mercator",
-    "home_port": "Brundisium",
-}
-{
-    "name": "Templum Apollinis",
-    "customer_type": "templum",
-    "home_port": "Neapolis",
-}
-{
-    "name": "Templum Fortunae",
-    "customer_type": "templum",
-    "home_port": "Syracusae",
-}
-{
-    "name": "Aulus Vitellius",
-    "customer_type": "praefectus",
-    "home_port": "Tarentum",
-}
-{
-    "name": "Servius Malleus",
-    "customer_type": "praefectus",
-    "home_port": "Messana",
-}
-{
-    "name": "Decimus Obscurus",
-    "customer_type": "magus",
-    "home_port": "Panormus",
-}
+{"name": "Marcus Crassus Minor", "customer_type": "mercator", "home_port": "Ostia"}
+{"name": "Lucius Petronius", "customer_type": "mercator", "home_port": "Puteoli"}
+{"name": "Gaius Sempronius", "customer_type": "mercator", "home_port": "Brundisium"}
+{"name": "Templum Apollinis", "customer_type": "templum", "home_port": "Neapolis"}
+{"name": "Templum Fortunae", "customer_type": "templum", "home_port": "Syracusae"}
+{"name": "Aulus Vitellius", "customer_type": "praefectus", "home_port": "Tarentum"}
+{"name": "Servius Malleus", "customer_type": "praefectus", "home_port": "Messana"}
+{"name": "Decimus Obscurus", "customer_type": "magus", "home_port": "Panormus"}
