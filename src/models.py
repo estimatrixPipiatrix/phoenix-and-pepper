@@ -51,3 +51,17 @@ class Ship(Base):
     home_port_id: Mapped[int] = mapped_column(ForeignKey("ports.id"))
     condition: Mapped[int] = mapped_column(Integer)
     status: Mapped[str] = mapped_column(String(50))
+
+
+class CargoType(Base):
+    __tablename__ = "cargo_types"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(100), unique=True)
+    cargo_class: Mapped[str] = mapped_column(String(20))
+    unit_price_denarii: Mapped[int] = mapped_column(Integer)
+    unit_weight_kg: Mapped[float] = mapped_column(Float)
+    special_handling: Mapped[str | None] = mapped_column(
+        String(200),
+        nullable=True,
+    )

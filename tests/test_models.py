@@ -1,4 +1,4 @@
-from src.models import Port, Route, ShipType, Ship
+from src.models import Port, Route, ShipType, Ship, CargoType
 
 
 def test_port_creations():
@@ -55,3 +55,27 @@ def test_ship_creation():
     assert ship.name == "Vesper"
     assert ship.condition == 4
     assert ship.status == "in_port"
+
+
+def test_cargo_type_creation():
+    cargo = CargoType(
+        name="Basilisk Venom",
+        cargo_class="phoenix",
+        unit_price_denarii=500,
+        unit_weight_kg=2.0,
+        special_handling="Requires sealed lead container",
+    )
+    assert cargo.name == "Basilisk Venom"
+    assert cargo.cargo_class == "phoenix"
+    assert cargo.special_handling is not None
+
+
+def test_cargo_type_no_special_handling():
+    cargo = CargoType(
+        name="Pepper",
+        cargo_class="pepper",
+        unit_price_denarii=15,
+        unit_weight_kg=0.5,
+    )
+    assert cargo.name == "Pepper"
+    assert cargo.special_handling is None
