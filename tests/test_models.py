@@ -1,4 +1,4 @@
-from src.models import Port, Route
+from src.models import Port, Route, ShipType, Ship
 
 
 def test_port_creations():
@@ -28,3 +28,30 @@ def test_route_creation():
     assert route.distance_km == 220.0
     assert route.danger_level == 3
     assert route.danger_type == "mythological"
+
+
+def test_ship_type_creation():
+    ship_type = ShipType(
+        name="Actuaria",
+        description="Fast vessel with oars and sails, suitable for dangerous cargo",
+        cargo_capacity_tons=80,
+        base_speed_knots=6.5,
+        operating_cost_daily=120,
+        can_carry_phoenix=True,
+    )
+    assert ship_type.name == "Actuaria"
+    assert ship_type.cargo_capacity_tons == 80
+    assert ship_type.can_carry_phoenix is True
+
+
+def test_ship_creation():
+    ship = Ship(
+        name="Vesper",
+        ship_type_id=1,
+        home_port_id=1,
+        condition=4,
+        status="in_port",
+    )
+    assert ship.name == "Vesper"
+    assert ship.condition == 4
+    assert ship.status == "in_port"

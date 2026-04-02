@@ -27,3 +27,27 @@ class Route(Base):
     base_sailing_days: Mapped[int] = mapped_column(Integer)
     danger_level: Mapped[int] = mapped_column(Integer)
     danger_type: Mapped[int] = mapped_column(String(50))
+
+
+class ShipType(Base):
+    __tablename__ = "ship_types"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(100), unique=True)
+    description: Mapped[str] = mapped_column(String(500))
+    cargo_capacity_tons: Mapped[int] = mapped_column(Integer)
+    base_speed_knots: Mapped[float] = mapped_column(Float)
+    operating_speed_knots: Mapped[float] = mapped_column(Float)
+    operating_cost_daily: Mapped[int] = mapped_column(Integer)
+    can_carry_phoenix: Mapped[bool] = mapped_column(default=False)
+
+
+class Ship(Base):
+    __tablename__ = "ships"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(100), unique=True)
+    ship_type_id: Mapped[int] = mapped_column(ForeignKey("ship_types.id"))
+    home_port_id: Mapped[int] = mapped_column(ForeignKey("ports.id"))
+    condition: Mapped[int] = mapped_column(Integer)
+    status: Mapped[str] = mapped_column(String(50))
