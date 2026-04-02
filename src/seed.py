@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from src.models import Port, Route, ShipType, Ship, CargoType
+from src.models import Port, Route, ShipType, Ship, CargoType, Customer
 
 
 def load_ports(session, path=None):
@@ -81,5 +81,25 @@ def load_cargo_types(session, path=None):
         for line in f:
             row = json.loads(line)
             session.add(CargoType(**row))
+
+    session.commit()
+
+
+def load_customers(session, path=None):
+    if path is None:
+        path = Path(__file__).parent.parent / "data" / "customers.jsonl"
+
+    ports = {p.name: p.id for p in session.query(Port).all()}
+
+    with open(path) as f:
+        for line in f:
+            row = json.loads(line)
+            session.add(
+                Customer(
+                    name=row["name"],
+                    customer_type=row["customer_type"],
+                    home_port_id=ports[row["home_port"]],
+                )
+            )
 
     session.commit()
