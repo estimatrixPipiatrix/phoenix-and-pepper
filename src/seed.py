@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from src.models import Port, Route
+from src.models import Port, Route, ShipType, Ship, CargoType
 
 
 def load_ports(session, path=None):
@@ -34,5 +34,52 @@ def load_routes(session, path=None):
                     danger_type=row["danger_type"],
                 )
             )
+
+    session.commit()
+
+
+def load_ship_types(session, path=None):
+    if path is None:
+        path = Path(__file__).parent.parent / "data" / "ship_types.jsonl"
+
+    with open(path) as f:
+        for line in f:
+            row = json.loads(line)
+            session.add(ShipType(**row))
+
+    session.commit()
+
+
+def load_ships(session, path=None):
+    if path is None:
+        path = Path(__file__).parent.parent / "data" / "ships.jsonl"
+
+    ship_types = {st.name: st.id for st in session.query(ShipType).all()}
+    ports = {p.name: p.id for p in session.query(Port).all()}
+
+    with open(path) as f:
+        for line in f:
+            row = json.loads(line)
+            session.add(
+                Ship(
+                    name=row["name"],
+                    ship_type_id=ship_types[row["ship_type"]],
+                    home_port_id=ports[row["home_port"]],
+                    condition=row["condition"],
+                    status=row["status"],
+                )
+            )
+
+    session.commit()
+
+
+def load_cargo_types(session, path=None):
+    if path is None:
+        path = Path(__file__).parent.parent / "data" / "cargo_types.jsonl"
+
+    with open(path) as f:
+        for line in f:
+            row = json.loads(line)
+            session.add(CargoType(**row))
 
     session.commit()
