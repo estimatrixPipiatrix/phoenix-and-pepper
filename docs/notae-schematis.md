@@ -3,7 +3,7 @@ Phoenix et Piper — Notae Schematis
 Quid aedificavimus et cur
 Schema et modela
 
-Schema est structura datorum in ipsa Postgres — tabulae, columnae, typi, vincula. Modelum est classis Pythonica (in SQLAlchemy scripta) quae schema definit. Modela scribimus; SQLAlchemy schema creat.
+Schema est structura datorum in Postgres — tabulae, columnae, typi, vincula. Modelum est classis Pythonica (in SQLAlchemy scripta) quae schema definit. Modela scribimus; SQLAlchemy schema creat.
 
 Hoc instrumentum ORM nominatur — Object-Relational Mapper. Inter duos mundos versatur: Python obiecta habet, Postgres tabulas habet; ORM inter eos interpretatur.
 
@@ -28,7 +28,7 @@ Catena "ports.id" nomen tabulae et columnae indicat.
 
 Columnae nullabiles
 
-Non omnis columna semper valorem habet. special_handling in mercibus Pepper-classis vacua est, quia piper nullam curam specialem requirit. Hoc per nullable=True significamus:
+Non omnis columna semper valorem habet. special_handling in mercibus Pepper-classis vacua est, quia piper nullam curam propriam requirit. Hoc per nullable=True significamus:
 
 special_handling: Mapped[str | None] = mapped_column(String(200), nullable=True)
 
@@ -71,7 +71,7 @@ Genus mercis (cargo_types)
 
 Merces quas Phoenix et Piper transportat. Duae classes:
 
-Phoenix-classis — rarae, periculosae, mythologicae (cinis phoenicis, venenum basilisci, lapides magnetici). Pretia alta, periculum altum, cura specialis.
+Phoenix-classis — rarae, periculosae, mythologicae (cinis phoenicis, venenum basilisci, lapides magnetici). Pretia alta, periculum altum, cura propria.
 Pepper-classis — merces communes (piper, garum, silphium, purpura Tyria). Moles magna, margines tenues.
 
 special_handling nullabilis est — merces Pepper-classis hoc campo non egent.
