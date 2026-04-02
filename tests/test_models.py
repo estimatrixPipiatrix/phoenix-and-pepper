@@ -1,4 +1,4 @@
-from src.models import Port, Route, ShipType, Ship, CargoType
+from src.models import Port, Route, ShipType, Ship, CargoType, Customer
 
 
 def test_port_creations():
@@ -79,3 +79,13 @@ def test_cargo_type_no_special_handling():
     )
     assert cargo.name == "Pepper"
     assert cargo.special_handling is None
+
+
+def test_customer_creation():
+    customer = Customer(
+        name="Marcus Aurelius Garum",
+        customer_type="merchant",
+        home_port_id=1,
+    )
+    assert customer.name == "Marcus Aurelius Garum"
+    assert customer.customer_type == "merchant"

@@ -65,3 +65,12 @@ class CargoType(Base):
         String(200),
         nullable=True,
     )
+
+
+class Customer(Base):
+    __tablename__ = "customers"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(100))
+    customer_type: Mapped[str] = mapped_column(String(50))
+    home_port_id: Mapped[int] = mapped_column(ForeignKey("ports.id"))
