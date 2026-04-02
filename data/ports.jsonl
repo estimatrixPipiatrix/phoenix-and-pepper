@@ -1,8 +1,56 @@
-{"name": "Ostia", "latitude": 41.76, "longitude": 12.29, "size": 5, "base_fee": 50}
-{"name": "Puteoli", "latitude": 40.82, "longitude": 14.12, "size": 5, "base_fee": 55}
-{"name": "Neapolis", "latitude": 40.85, "longitude": 14.27, "size": 3, "base_fee": 35}
-{"name": "Brundisium", "latitude": 40.64, "longitude": 17.94, "size": 4, "base_fee": 45}
-{"name": "Tarentum", "latitude": 40.47, "longitude": 17.24, "size": 3, "base_fee": 30}
-{"name": "Syracusae", "latitude": 37.07, "longitude": 15.29, "size": 4, "base_fee": 40}
-{"name": "Messana", "latitude": 38.19, "longitude": 15.56, "size": 3, "base_fee": 35}
-{"name": "Panormus", "latitude": 38.12, "longitude": 13.36, "size": 2, "base_fee": 25}
+{
+    "name": "Ostia",
+    "latitude": 41.76,
+    "longitude": 12.29,
+    "size": 5,
+    "base_fee": 50,
+}
+{
+    "name": "Puteoli",
+    "latitude": 40.82,
+    "longitude": 14.12,
+    "size": 5,
+    "base_fee": 55,
+}
+{
+    "name": "Neapolis",
+    "latitude": 40.85,
+    "longitude": 14.27,
+    "size": 3,
+    "base_fee": 35,
+}
+{
+    "name": "Brundisium",
+    "latitude": 40.64,
+    "longitude": 17.94,
+    "size": 4,
+    "base_fee": 45,
+}
+{
+    "name": "Tarentum",
+    "latitude": 40.47,
+    "longitude": 17.24,
+    "size": 3,
+    "base_fee": 30,
+}
+{
+    "name": "Syracusae",
+    "latitude": 37.07,
+    "longitude": 15.29,
+    "size": 4,
+    "base_fee": 40,
+}
+{
+    "name": "Messana",
+    "latitude": 38.19,
+    "longitude": 15.56,
+    "size": 3,
+    "base_fee": 35,
+}
+{
+    "name": "Panormus",
+    "latitude": 38.12,
+    "longitude": 13.36,
+    "size": 2,
+    "base_fee": 25,
+}
