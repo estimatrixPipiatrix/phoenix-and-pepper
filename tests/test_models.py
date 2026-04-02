@@ -1,4 +1,5 @@
 from src.models import Port, Route, ShipType, Ship, CargoType, Customer
+from src.models import Order, OrderLine
 
 
 def test_port_creations():
@@ -89,3 +90,25 @@ def test_customer_creation():
     )
     assert customer.name == "Marcus Aurelius Garum"
     assert customer.customer_type == "merchant"
+
+
+def test_order_creation():
+    order = Order(
+        customer_id=1,
+        destination_port_id=2,
+        order_date="753-03-15",
+        status="pending",
+    )
+    assert order.customer_id == 1
+    assert order.status == "pending"
+
+
+def test_order_line_creation():
+    line = OrderLine(
+        order_id=1,
+        cargo_type_id=3,
+        quantity=50,
+    )
+    assert line.order_id == 1
+    assert line.cargo_type_id == 3
+    assert line.quantity == 50

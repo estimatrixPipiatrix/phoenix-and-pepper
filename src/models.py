@@ -74,3 +74,22 @@ class Customer(Base):
     name: Mapped[str] = mapped_column(String(100))
     customer_type: Mapped[str] = mapped_column(String(50))
     home_port_id: Mapped[int] = mapped_column(ForeignKey("ports.id"))
+
+
+class Order(Base):
+    __tablename__ = "orders"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    customer_id: Mapped[int] = mapped_column(ForeignKey("customers.id"))
+    destination_port_id: Mapped[int] = mapped_column(ForeignKey("ports.id"))
+    order_date: Mapped[str] = mapped_column(String(10))
+    status: Mapped[str] = mapped_column(String(20))
+
+
+class OrderLine(Base):
+    __tablename__ = "order_lines"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    order_id: Mapped[int] = mapped_column(ForeignKey("orders.id"))
+    cargo_type_id: Mapped[int] = mapped_column(ForeignKey("cargo_types.id"))
+    quantity: Mapped[int] = mapped_column(Integer)
