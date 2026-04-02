@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 from src.models import Port, Route, ShipType, Ship, CargoType, Customer
+from src.models import Order, OrderLine
 
 
 def load_ports(session, path=None):
@@ -99,6 +100,50 @@ def load_customers(session, path=None):
                     name=row["name"],
                     customer_type=row["customer_type"],
                     home_port_id=ports[row["home_port"]],
+                )
+            )
+
+    session.commit()
+
+
+def load_orders(session, path=None):
+    if path is None:
+        path = Path(__file__).parent.parent / "data" / "orders.jsonl"
+
+    customers = {c.name: c.id for c in session.query(Customer).all()}
+    ports = {p.name: p.id for p in session.query(Port).all()}
+
+    with open(path) as f:
+        for line in f:
+            row = json.loads(line)
+            session.add(
+                Order(
+                    customer_id=customers[row["customer"]],
+                    destination_port_id=ports[row["destination_port"]],
+                    order_date=row["order_date"],
+                    status=row["status"],
+                )
+            )
+
+    session.commit()
+
+
+def load_order_lines(session, path=None):
+    if path is None:
+        path = Path(__file__).parent.parent / "data" / "order_lines.jsonl"
+
+    orders = session.query(Order).all()
+    order_ids = {i + 1: o.id for i, o in enumerate(orders)}
+    cargo_types = {ct.name: ct.id for ct in session.query(CargoType).all()}
+
+    with open(path) as f:
+        for line in f:
+            row = json.loads(line)
+            session.add(
+                OrderLine(
+                    order_id=order_ids[row["order_index"]],
+                    cargo_type_id=cargo_types[row["cargo_type"]],
+                    quantity=row["quantity"],
                 )
             )
 
