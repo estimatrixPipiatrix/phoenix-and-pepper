@@ -93,3 +93,25 @@ class OrderLine(Base):
     order_id: Mapped[int] = mapped_column(ForeignKey("orders.id"))
     cargo_type_id: Mapped[int] = mapped_column(ForeignKey("cargo_types.id"))
     quantity: Mapped[int] = mapped_column(Integer)
+
+
+class Voyage(Base):
+    __tablename__ = "voyages"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    ship_id: Mapped[int] = mapped_column(ForeignKey("ships.id"))
+    route_id: Mapped[int] = mapped_column(ForeignKey("routes.id"))
+    departure_date: Mapped[str] = mapped_column(String(10))
+    arrival_date: Mapped[str | None] = mapped_column(
+        String(10),
+        nullable=True,
+    )
+    status: Mapped[str] = mapped_column(String(20))
+
+
+class VoyageManifest(Base):
+    __tablename__ = "voyage_manifest"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    voyage_id: Mapped[int] = mapped_column(ForeignKey("voyages.id"))
+    order_line_id: Mapped[int] = mapped_column(ForeignKey("order_lines.id"))

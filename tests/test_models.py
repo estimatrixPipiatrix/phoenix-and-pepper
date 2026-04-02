@@ -1,5 +1,5 @@
 from src.models import Port, Route, ShipType, Ship, CargoType, Customer
-from src.models import Order, OrderLine
+from src.models import Order, OrderLine, Voyage, VoyageManifest
 
 
 def test_port_creations():
@@ -112,3 +112,25 @@ def test_order_line_creation():
     assert line.order_id == 1
     assert line.cargo_type_id == 3
     assert line.quantity == 50
+
+
+def test_voyage_creation():
+    voyage = Voyage(
+        ship_id=1,
+        route_id=3,
+        departure_date="753-04-01",
+        status="underway",
+    )
+    assert voyage.ship_id == 1
+    assert voyage.route_id == 3
+    assert voyage.arrival_date is None
+    assert voyage.status == "underway"
+
+
+def test_voyage_manifest_creation():
+    manifest = VoyageManifest(
+        voyage_id=1,
+        order_line_id=7,
+    )
+    assert manifest.voyage_id == 1
+    assert manifest.order_line_id == 7
