@@ -138,13 +138,13 @@ The entire business is about managing the tension between these two sides.
 - `dbt` for data transformations
 - GitHub CI/CD for orchestrating data workflows (scheduled runs, data validation)
 - Pydantic AI agent for natural-language data queries
-- Lightweight MBSE: JSON-defined system models visualized with NetworkX + Graphviz
+- MBSE: system models visualized with NetworkX + Graphviz
 
-**Skills:** Data engineering (ETL/ELT), Kubernetes, Pydantic/Pydantic AI, lightweight MBSE, infrastructure-as-code.
+**Skills:** Data engineering (ETL/ELT), Kubernetes, Pydantic/Pydantic AI, MBSE, infrastructure-as-code.
 
 **Business concepts:** Data engineering/pipelines, data governance, enterprise architecture, decision intelligence as formal practice.
 
-**Blog ideas:** "Scaling a Roman trading empire with Kubernetes and dbt" · "Building a decision intelligence layer for Phoenix et Piper" · "Lightweight MBSE with JSON and NetworkX"
+**Blog ideas:** "Scaling a Roman trading empire with Kubernetes and dbt" · "Building a decision intelligence layer for Phoenix et Piper" · "MBSE and NetworkX"
 
 **Dashboard question:** *Can I trust this decision without manually checking the data?*
 
