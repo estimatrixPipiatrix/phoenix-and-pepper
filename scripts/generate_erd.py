@@ -1,12 +1,6 @@
 from graphviz import Digraph
-from sqlalchemy import create_engine
 from src.models import Base
 
-
-engine = create_engine(
-    "postgresql://phoenix:pepper@localhost:5432/phoenix_and_pepper",
-)
-Base.metadata.reflect(bind=engine)
 
 dot = Digraph(
     "Phoenix et Piper",
@@ -42,4 +36,4 @@ for table in Base.metadata.sorted_tables:
         target_table = fk.column.table.name
         dot.edge(table.name, target_table, label=fk.parent.name)
 
-dot.render("docs/erd", cleanup=True, view=True)
+dot.render("erd", cleanup=True, view=True)

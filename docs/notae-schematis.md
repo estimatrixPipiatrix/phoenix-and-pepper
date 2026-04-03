@@ -34,7 +34,7 @@ special_handling: Mapped[str | None] = mapped_column(String(200), nullable=True)
 
 Mapped[str | None] Pythoni dicit: “valor fortasse None erit.” nullable=True Postgres dicit: “columna vacua esse licet.”
 
-Entitates nostrae
+Entia nostra
 Portus (ports)
 
 Locus ubi naves applicant. Nomen, situs (latitudo et longitudo), magnitudo, vectigal fundamentale.
@@ -108,7 +108,7 @@ Haec tabula interrogationibus fundamentalibus respondet: quid in hac nave est? q
 
 Probationes (tests)
 
-Quamque entitatem probatione simplici confirmamus — obiectum Pythonicum creamus et attributa inspicimus:
+Quodque ens probatione simplici confirmamus — obiectum Pythonicum creamus et attributa inspicimus:
 
 def test_port_creation():
     port = Port(name="Ostia", latitude=41.76, longitude=12.29, size=5, base_fee=50)
@@ -145,7 +145,7 @@ phoenix-and-pepper/
 │   ├── __init__.py
 │   └── models.py                  — omnia modela SQLAlchemy
 ├── tests/
-│   └── test_models.py             — XI probationes entitatum
+│   └── test_models.py             — XI probationes entium
 ├── .pre-commit-config.yaml
 ├── docker-compose.yml
 ├── pyproject.toml
