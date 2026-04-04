@@ -42,6 +42,7 @@ SHIP_TYPES = [
         "operating_speed_knots": 3.0,
         "operating_cost_daily": 80,
         "can_carry_phoenix": False,
+        "crew_cost_daily": 40,
     },
     {
         "name": "Actuaria",
@@ -51,6 +52,7 @@ SHIP_TYPES = [
         "operating_speed_knots": 5.5,
         "operating_cost_daily": 120,
         "can_carry_phoenix": True,
+        "crew_cost_daily": 40,
     },
 ]
 

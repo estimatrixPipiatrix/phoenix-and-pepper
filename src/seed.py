@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 from src.models import Port, Route, ShipType, Ship, CargoType, Customer
-from src.models import Order, OrderLine, Voyage, VoyageManifest
+from src.models import Order, OrderLine, Voyage, VoyageManifest, VoyageCost
 
 
 def load_ports(session, path=None):
@@ -199,6 +199,31 @@ def load_voyage_manifest(session, path=None):
                 VoyageManifest(
                     voyage_id=voyage_ids[row["voyage_index"]],
                     order_line_id=order_line_ids[row["order_line_index"]],
+                )
+            )
+
+    session.commit()
+
+
+def load_voyage_costs(session, path=None):
+    if path is None:
+        path = Path(__file__).parent.parent / "data" / "voyage_costs.jsonl"
+
+    voyages = session.query(Voyage).all()
+    voyage_ids = {i + 1: v.id for i, v in enumerate(voyages)}
+
+    with open(path) as f:
+        for line in f:
+            row = json.loads(line)
+            session.add(
+                VoyageCost(
+                    voyage_id=voyage_ids[row["voyage_index"]],
+                    ship_operations_cost=row["ship_operations_cost"],
+                    port_fees=row["port_fees"],
+                    crew_wages=row["crew_wages"],
+                    phoenix_handling_cost=row["phoenix_handling_cost"],
+                    hazard_surcharge=row["hazard_surcharge"],
+                    total_cost=row["total_cost"],
                 )
             )
 

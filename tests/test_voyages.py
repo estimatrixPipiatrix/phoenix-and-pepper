@@ -79,6 +79,7 @@ SHIP_TYPES = [
         "operating_speed_knots": 3.0,
         "operating_cost_daily": 80,
         "can_carry_phoenix": False,
+        "crew_cost_daily": 40,
     },
 ]
 

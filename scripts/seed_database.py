@@ -13,6 +13,7 @@ from src.seed import (
     load_order_lines,
     load_voyages,
     load_voyage_manifest,
+    load_voyage_costs,
 )
 
 DATABASE_URL = "postgresql://phoenix:pepper@localhost:5432/phoenix_and_pepper"
@@ -36,6 +37,7 @@ load_orders(session)
 load_order_lines(session)
 load_voyages(session)
 load_voyage_manifest(session)
+load_voyage_costs(session)
 
 session.close()
 

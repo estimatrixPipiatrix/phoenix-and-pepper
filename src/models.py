@@ -40,6 +40,7 @@ class ShipType(Base):
     operating_speed_knots: Mapped[float] = mapped_column(Float)
     operating_cost_daily: Mapped[int] = mapped_column(Integer)
     can_carry_phoenix: Mapped[bool] = mapped_column(default=False)
+    crew_cost_daily: Mapped[int] = mapped_column(Integer)
 
 
 class Ship(Base):
@@ -65,6 +66,7 @@ class CargoType(Base):
         String(200),
         nullable=True,
     )
+    handling_cost_per_unit: Mapped[int] = mapped_column(Integer, default=0)
 
 
 class Customer(Base):
@@ -115,3 +117,16 @@ class VoyageManifest(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     voyage_id: Mapped[int] = mapped_column(ForeignKey("voyages.id"))
     order_line_id: Mapped[int] = mapped_column(ForeignKey("order_lines.id"))
+
+
+class VoyageCost(Base):
+    __tablename__ = "voyage_costs"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    voyage_id: Mapped[int] = mapped_column(ForeignKey("voyages.id"))
+    ship_operations_cost: Mapped[int] = mapped_column(Integer)
+    port_fees: Mapped[int] = mapped_column(Integer)
+    crew_wages: Mapped[int] = mapped_column(Integer)
+    phoenix_handling_cost: Mapped[int] = mapped_column(Integer)
+    hazard_surcharge: Mapped[int] = mapped_column(Integer)
+    total_cost: Mapped[int] = mapped_column(Integer)

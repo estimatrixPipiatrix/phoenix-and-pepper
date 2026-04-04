@@ -6,3 +6,6 @@
 {"name": "Aulus Vitellius", "customer_type": "praefectus", "home_port": "Tarentum"}
 {"name": "Servius Malleus", "customer_type": "praefectus", "home_port": "Messana"}
 {"name": "Decimus Obscurus", "customer_type": "magus", "home_port": "Panormus"}
+{"name": "Castra Legionis III", "customer_type": "legio", "home_port": "Brundisium"}
+{"name": "Gaius Aurelius Magnificus", "customer_type": "patronus", "home_port": "Puteoli"}
+{"name": "Collegium Magorum Neapolitanum", "customer_type": "collegium", "home_port": "Neapolis"}
