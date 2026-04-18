@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c0cced55080a31ec19738a3fe02ed5a4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c0cced55080a31ec19738a3fe02ed5a4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c0cced55080a31ec19738a3fe02ed5a4 = L.map(
+                "map_c0cced55080a31ec19738a3fe02ed5a4",
+                {
+                    center: [39.0, 15.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5.0,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e53f5a31b12054266b162bc8e5db3930 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e53f5a31b12054266b162bc8e5db3930.addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            var poly_line_fac726fac858ca814fa7a9ed55bed6ea = L.polyline(
+                [[41.76, 12.29], [40.82, 14.12]],
+                {"bubblingMouseEvents": true, "color": "#4a7fb5", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#4a7fb5", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_fac726fac858ca814fa7a9ed55bed6ea.bindTooltip(
+                `<div>
+                     Ostia → Puteoli · 260km · 3d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_cf1a599dd2a936128ab99d86fb1114b7 = L.polyline(
+                [[40.82, 14.12], [41.76, 12.29]],
+                {"bubblingMouseEvents": true, "color": "#4a7fb5", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#4a7fb5", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_cf1a599dd2a936128ab99d86fb1114b7.bindTooltip(
+                `<div>
+                     Puteoli → Ostia · 260km · 3d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a7fe5e91f01864504f9070eb66c09a8c = L.polyline(
+                [[41.76, 12.29], [40.85, 14.27]],
+                {"bubblingMouseEvents": true, "color": "#4a7fb5", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#4a7fb5", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_a7fe5e91f01864504f9070eb66c09a8c.bindTooltip(
+                `<div>
+                     Ostia → Neapolis · 280km · 3d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_9cf1e5eb57d83bbe18c1d15db900610f = L.polyline(
+                [[40.85, 14.27], [41.76, 12.29]],
+                {"bubblingMouseEvents": true, "color": "#4a7fb5", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#4a7fb5", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_9cf1e5eb57d83bbe18c1d15db900610f.bindTooltip(
+                `<div>
+                     Neapolis → Ostia · 280km · 3d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_968e3bba120ddb2680a2c0992f3913f0 = L.polyline(
+                [[40.82, 14.12], [40.85, 14.27]],
+                {"bubblingMouseEvents": true, "color": "#4a7fb5", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#4a7fb5", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_968e3bba120ddb2680a2c0992f3913f0.bindTooltip(
+                `<div>
+                     Puteoli → Neapolis · 30km · 1d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_fb912a8e6690df1d281d6107a23e7ab1 = L.polyline(
+                [[40.85, 14.27], [40.82, 14.12]],
+                {"bubblingMouseEvents": true, "color": "#4a7fb5", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#4a7fb5", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_fb912a8e6690df1d281d6107a23e7ab1.bindTooltip(
+                `<div>
+                     Neapolis → Puteoli · 30km · 1d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f7b157b534c2bb9ae37ada5402887c4c = L.polyline(
+                [[40.85, 14.27], [38.19, 15.56]],
+                {"bubblingMouseEvents": true, "color": "#7ab648", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#7ab648", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_f7b157b534c2bb9ae37ada5402887c4c.bindTooltip(
+                `<div>
+                     Neapolis → Messana · 350km · 4d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4a78033273724e17ca0a69f71eed9a45 = L.polyline(
+                [[38.19, 15.56], [40.85, 14.27]],
+                {"bubblingMouseEvents": true, "color": "#7ab648", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#7ab648", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_4a78033273724e17ca0a69f71eed9a45.bindTooltip(
+                `<div>
+                     Messana → Neapolis · 350km · 4d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_bb3812112e1c00849f77aa989a006448 = L.polyline(
+                [[38.19, 15.56], [37.07, 15.29]],
+                {"bubblingMouseEvents": true, "color": "#d44a2e", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#d44a2e", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_bb3812112e1c00849f77aa989a006448.bindTooltip(
+                `<div>
+                     Messana → Syracusae · 140km · 2d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_1739c9ae063ed7bd3685b73ac137afe7 = L.polyline(
+                [[37.07, 15.29], [38.19, 15.56]],
+                {"bubblingMouseEvents": true, "color": "#d44a2e", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#d44a2e", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_1739c9ae063ed7bd3685b73ac137afe7.bindTooltip(
+                `<div>
+                     Syracusae → Messana · 140km · 2d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_ad0baeabdf36e808c68826507549419d = L.polyline(
+                [[38.19, 15.56], [38.12, 13.36]],
+                {"bubblingMouseEvents": true, "color": "#7ab648", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#7ab648", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_ad0baeabdf36e808c68826507549419d.bindTooltip(
+                `<div>
+                     Messana → Panormus · 230km · 3d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_957c7a1fbd2cf0ea6e1c5d9c6c95006d = L.polyline(
+                [[38.12, 13.36], [38.19, 15.56]],
+                {"bubblingMouseEvents": true, "color": "#7ab648", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#7ab648", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_957c7a1fbd2cf0ea6e1c5d9c6c95006d.bindTooltip(
+                `<div>
+                     Panormus → Messana · 230km · 3d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_46e656b81850fcf29a7d9963111c8450 = L.polyline(
+                [[40.64, 17.94], [40.47, 17.24]],
+                {"bubblingMouseEvents": true, "color": "#4a7fb5", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#4a7fb5", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_46e656b81850fcf29a7d9963111c8450.bindTooltip(
+                `<div>
+                     Brundisium → Tarentum · 120km · 2d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e9b836d5fc51a296da1ccb759ba1a907 = L.polyline(
+                [[40.47, 17.24], [40.64, 17.94]],
+                {"bubblingMouseEvents": true, "color": "#4a7fb5", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#4a7fb5", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_e9b836d5fc51a296da1ccb759ba1a907.bindTooltip(
+                `<div>
+                     Tarentum → Brundisium · 120km · 2d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_990c5b4edb655bd03ce161dd039d6279 = L.polyline(
+                [[41.76, 12.29], [37.07, 15.29]],
+                {"bubblingMouseEvents": true, "color": "#e8a735", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e8a735", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_990c5b4edb655bd03ce161dd039d6279.bindTooltip(
+                `<div>
+                     Ostia → Syracusae · 550km · 6d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_144e982539bf87c72f38e12ca07ad8f6 = L.polyline(
+                [[37.07, 15.29], [41.76, 12.29]],
+                {"bubblingMouseEvents": true, "color": "#e8a735", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e8a735", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_144e982539bf87c72f38e12ca07ad8f6.bindTooltip(
+                `<div>
+                     Syracusae → Ostia · 550km · 6d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_7764985395cc77be278767c222db6314 = L.polyline(
+                [[40.82, 14.12], [40.64, 17.94]],
+                {"bubblingMouseEvents": true, "color": "#7ab648", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#7ab648", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_7764985395cc77be278767c222db6314.bindTooltip(
+                `<div>
+                     Puteoli → Brundisium · 420km · 5d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b5e8502515e6698326d5e1108119b48a = L.polyline(
+                [[40.64, 17.94], [40.82, 14.12]],
+                {"bubblingMouseEvents": true, "color": "#7ab648", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#7ab648", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_b5e8502515e6698326d5e1108119b48a.bindTooltip(
+                `<div>
+                     Brundisium → Puteoli · 420km · 5d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_6a57a02aac707556eab75e5f2bf6178d = L.polyline(
+                [[41.76, 12.29], [40.47, 17.24]],
+                {"bubblingMouseEvents": true, "color": "#7ab648", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#7ab648", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_6a57a02aac707556eab75e5f2bf6178d.bindTooltip(
+                `<div>
+                     Ostia → Tarentum · 480km · 5d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_1acdb7edae36915d54defd4e0378d5c5 = L.polyline(
+                [[40.47, 17.24], [41.76, 12.29]],
+                {"bubblingMouseEvents": true, "color": "#7ab648", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#7ab648", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_1acdb7edae36915d54defd4e0378d5c5.bindTooltip(
+                `<div>
+                     Tarentum → Ostia · 480km · 5d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_9d8816c00eeccccf9c487947a509dea4 = L.polyline(
+                [[40.82, 14.12], [37.07, 15.29]],
+                {"bubblingMouseEvents": true, "color": "#e8a735", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e8a735", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_9d8816c00eeccccf9c487947a509dea4.bindTooltip(
+                `<div>
+                     Puteoli → Syracusae · 470km · 5d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_7c67b84426b62aaf3529ae60fdb2106e = L.polyline(
+                [[37.07, 15.29], [40.82, 14.12]],
+                {"bubblingMouseEvents": true, "color": "#e8a735", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e8a735", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_7c67b84426b62aaf3529ae60fdb2106e.bindTooltip(
+                `<div>
+                     Syracusae → Puteoli · 470km · 5d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_eb75043dc140c73100ab47538ee9eb96 = L.polyline(
+                [[41.76, 12.29], [38.19, 15.56]],
+                {"bubblingMouseEvents": true, "color": "#e8a735", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e8a735", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_eb75043dc140c73100ab47538ee9eb96.bindTooltip(
+                `<div>
+                     Ostia → Messana · 500km · 5d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e5195fb4ef7bbfd025f94fd35bcc3efc = L.polyline(
+                [[38.19, 15.56], [41.76, 12.29]],
+                {"bubblingMouseEvents": true, "color": "#e8a735", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e8a735", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+            poly_line_e5195fb4ef7bbfd025f94fd35bcc3efc.bindTooltip(
+                `<div>
+                     Messana → Ostia · 500km · 5d
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_438bbca05a372e69687cb9ef87d36902 = L.circleMarker(
+                [41.76, 12.29],
+                {"bubblingMouseEvents": true, "color": "#222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#534AB7", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13, "stroke": true, "weight": 1.5}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+        var popup_5bceeb65dd8aab7d1f9a2eb6801cc6c2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_24ade8c081f51c613ddc8d7ca65ad2d5 = $(`<div id="html_24ade8c081f51c613ddc8d7ca65ad2d5" style="width: 100.0%; height: 100.0%;"><b>Ostia</b><br>Size: 5/5<br>Port fee: 50 denarii</div>`)[0];
+                popup_5bceeb65dd8aab7d1f9a2eb6801cc6c2.setContent(html_24ade8c081f51c613ddc8d7ca65ad2d5);
+            
+        
+
+        circle_marker_438bbca05a372e69687cb9ef87d36902.bindPopup(popup_5bceeb65dd8aab7d1f9a2eb6801cc6c2)
+        ;
+
+        
+    
+    
+            circle_marker_438bbca05a372e69687cb9ef87d36902.bindTooltip(
+                `<div>
+                     Ostia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_12b38b288c8f988249a82be117bbc569 = L.circleMarker(
+                [40.82, 14.12],
+                {"bubblingMouseEvents": true, "color": "#222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#534AB7", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13, "stroke": true, "weight": 1.5}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+        var popup_48aa46a70931ad3c1de2630522bffc3d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fafc301eb684c106eb6a93deb8fd7973 = $(`<div id="html_fafc301eb684c106eb6a93deb8fd7973" style="width: 100.0%; height: 100.0%;"><b>Puteoli</b><br>Size: 5/5<br>Port fee: 55 denarii</div>`)[0];
+                popup_48aa46a70931ad3c1de2630522bffc3d.setContent(html_fafc301eb684c106eb6a93deb8fd7973);
+            
+        
+
+        circle_marker_12b38b288c8f988249a82be117bbc569.bindPopup(popup_48aa46a70931ad3c1de2630522bffc3d)
+        ;
+
+        
+    
+    
+            circle_marker_12b38b288c8f988249a82be117bbc569.bindTooltip(
+                `<div>
+                     Puteoli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5eec02af1909561b8e7f89a013c129a5 = L.circleMarker(
+                [40.85, 14.27],
+                {"bubblingMouseEvents": true, "color": "#222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#534AB7", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 1.5}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+        var popup_b58dc12169344d0adf353a7288e84334 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f40d7e7113f138e3d01464f5e43c6ee5 = $(`<div id="html_f40d7e7113f138e3d01464f5e43c6ee5" style="width: 100.0%; height: 100.0%;"><b>Neapolis</b><br>Size: 3/5<br>Port fee: 35 denarii</div>`)[0];
+                popup_b58dc12169344d0adf353a7288e84334.setContent(html_f40d7e7113f138e3d01464f5e43c6ee5);
+            
+        
+
+        circle_marker_5eec02af1909561b8e7f89a013c129a5.bindPopup(popup_b58dc12169344d0adf353a7288e84334)
+        ;
+
+        
+    
+    
+            circle_marker_5eec02af1909561b8e7f89a013c129a5.bindTooltip(
+                `<div>
+                     Neapolis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_679d12f065c25e03b6dc0735e3feac37 = L.circleMarker(
+                [40.64, 17.94],
+                {"bubblingMouseEvents": true, "color": "#222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#534AB7", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11, "stroke": true, "weight": 1.5}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+        var popup_d5a448396ff9c4b3737705ceff7fdbd5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_801d22a5dacb45ed072c332d4191a6f4 = $(`<div id="html_801d22a5dacb45ed072c332d4191a6f4" style="width: 100.0%; height: 100.0%;"><b>Brundisium</b><br>Size: 4/5<br>Port fee: 45 denarii</div>`)[0];
+                popup_d5a448396ff9c4b3737705ceff7fdbd5.setContent(html_801d22a5dacb45ed072c332d4191a6f4);
+            
+        
+
+        circle_marker_679d12f065c25e03b6dc0735e3feac37.bindPopup(popup_d5a448396ff9c4b3737705ceff7fdbd5)
+        ;
+
+        
+    
+    
+            circle_marker_679d12f065c25e03b6dc0735e3feac37.bindTooltip(
+                `<div>
+                     Brundisium
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_86aa5184abf53622dba53717ab04b2bd = L.circleMarker(
+                [40.47, 17.24],
+                {"bubblingMouseEvents": true, "color": "#222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#534AB7", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 1.5}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+        var popup_3ad40ce3d0793944ac8a67dd57a13267 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_474af7690ac6c437c37268999ac5bfd2 = $(`<div id="html_474af7690ac6c437c37268999ac5bfd2" style="width: 100.0%; height: 100.0%;"><b>Tarentum</b><br>Size: 3/5<br>Port fee: 30 denarii</div>`)[0];
+                popup_3ad40ce3d0793944ac8a67dd57a13267.setContent(html_474af7690ac6c437c37268999ac5bfd2);
+            
+        
+
+        circle_marker_86aa5184abf53622dba53717ab04b2bd.bindPopup(popup_3ad40ce3d0793944ac8a67dd57a13267)
+        ;
+
+        
+    
+    
+            circle_marker_86aa5184abf53622dba53717ab04b2bd.bindTooltip(
+                `<div>
+                     Tarentum
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_02d5a8e7507639392b26e67c48dbd2c0 = L.circleMarker(
+                [37.07, 15.29],
+                {"bubblingMouseEvents": true, "color": "#222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#534AB7", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11, "stroke": true, "weight": 1.5}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+        var popup_47904c4b26cfd115a5ac295067bcb152 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_eaf31720973201ce3076c21ca3ac4851 = $(`<div id="html_eaf31720973201ce3076c21ca3ac4851" style="width: 100.0%; height: 100.0%;"><b>Syracusae</b><br>Size: 4/5<br>Port fee: 40 denarii</div>`)[0];
+                popup_47904c4b26cfd115a5ac295067bcb152.setContent(html_eaf31720973201ce3076c21ca3ac4851);
+            
+        
+
+        circle_marker_02d5a8e7507639392b26e67c48dbd2c0.bindPopup(popup_47904c4b26cfd115a5ac295067bcb152)
+        ;
+
+        
+    
+    
+            circle_marker_02d5a8e7507639392b26e67c48dbd2c0.bindTooltip(
+                `<div>
+                     Syracusae
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cdd34778528966e0815f2266ac337887 = L.circleMarker(
+                [38.19, 15.56],
+                {"bubblingMouseEvents": true, "color": "#222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#534AB7", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 1.5}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+        var popup_5031f822f183edefbdf58d20b7b465bb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2e7e39ed922799f0a9ecfd5f3f7ea1ad = $(`<div id="html_2e7e39ed922799f0a9ecfd5f3f7ea1ad" style="width: 100.0%; height: 100.0%;"><b>Messana</b><br>Size: 3/5<br>Port fee: 35 denarii</div>`)[0];
+                popup_5031f822f183edefbdf58d20b7b465bb.setContent(html_2e7e39ed922799f0a9ecfd5f3f7ea1ad);
+            
+        
+
+        circle_marker_cdd34778528966e0815f2266ac337887.bindPopup(popup_5031f822f183edefbdf58d20b7b465bb)
+        ;
+
+        
+    
+    
+            circle_marker_cdd34778528966e0815f2266ac337887.bindTooltip(
+                `<div>
+                     Messana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2569d1bee9ce70b98b7747dafe8a39ed = L.circleMarker(
+                [38.12, 13.36],
+                {"bubblingMouseEvents": true, "color": "#222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#534AB7", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1.5}
+            ).addTo(map_c0cced55080a31ec19738a3fe02ed5a4);
+        
+    
+        var popup_d879639dd8ad11302e973d82aa090627 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ee0729960790083129b3a7cfe5e547e8 = $(`<div id="html_ee0729960790083129b3a7cfe5e547e8" style="width: 100.0%; height: 100.0%;"><b>Panormus</b><br>Size: 2/5<br>Port fee: 25 denarii</div>`)[0];
+                popup_d879639dd8ad11302e973d82aa090627.setContent(html_ee0729960790083129b3a7cfe5e547e8);
+            
+        
+
+        circle_marker_2569d1bee9ce70b98b7747dafe8a39ed.bindPopup(popup_d879639dd8ad11302e973d82aa090627)
+        ;
+
+        
+    
+    
+            circle_marker_2569d1bee9ce70b98b7747dafe8a39ed.bindTooltip(
+                `<div>
+                     Panormus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
